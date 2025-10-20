@@ -1,7 +1,11 @@
 import pandas as pd
 import streamlit as st
-#import streamlit.components.v1 as components
 import plotly.express as px
+
+st.set_page_config(
+    page_title="Conversor DAT para gráfico",
+    page_icon="✨"
+)
 
 st.title("Selecione o arquivo .dat")
 #uploaded_file = st.file_uploader("Escolha o arquivo", type=["csv", "dat"])
