@@ -1,10 +1,13 @@
 import pandas as pd
 import streamlit as st
+#import streamlit.components.v1 as components
 import plotly.express as px
 
-st.title("Local File Selector")
-#uploaded_file = st.file_uploader("Choose a file", type=["csv", "txt", "pdf"])
-uploaded_file = st.file_uploader("Choose a file", type=["csv", "dat"])
+st.title("Selecione o arquivo .dat")
+#uploaded_file = st.file_uploader("Escolha o arquivo", type=["csv", "dat"])
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
+uploaded_file = st.file_uploader('Arraste e solte o arquivo DAT ou clique para selecionar', type=["csv", "dat"])
 
 if uploaded_file is not None:
 
@@ -27,4 +30,4 @@ if uploaded_file is not None:
         st.plotly_chart(fig)
 
 else:
-    st.info("Please upload a CSV file to proceed.")
+    st.info("Favor carregar arquivo .dat válido")

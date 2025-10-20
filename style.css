@@ -1,0 +1,10 @@
+/* O seletor pode variar dependendo da versão do Streamlit,
+    mas geralmente envolve a classe do elemento */
+
+[data-testid='stFileUploaderDropzoneInstructions'] {
+content-visibility: hidden;
+}
+
+.stAppHeader > div {
+    content-visibility: hidden;
+}
